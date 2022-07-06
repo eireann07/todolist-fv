@@ -1,5 +1,3 @@
-//jshint esversion:6
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -13,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // Persisting data to mongodb
-mongoose.connect("mongodb+srv://admin-erin:9fCI3XYStnn3p3sA@cluster0.vcdx1.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(mongodb://localhost:27017); //To eliminate sharing identification information
 
 const itemSchema = {
   name: String
